@@ -109,11 +109,15 @@
 
 typedef void *HWND;
 
+
 #endif	// _WINDEF_
 
 #ifndef	MICROSOFT_H
 #define	MICROSOFT_H
 
+#define SECURITY_WIN32
+#include <Windows.h>
+#include <Security.h>
 
 // Constant for Event log
 #define	MS_EVENTLOG_TYPE_INFORMATION		0

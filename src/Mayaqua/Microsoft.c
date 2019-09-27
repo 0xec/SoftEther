@@ -6397,7 +6397,8 @@ void MsTestModeW(wchar_t *title, SERVICE_FUNCTION *start, SERVICE_FUNCTION *stop
 	start();
 
 	// Display the message
-	MsgBoxEx(NULL, MB_ICONINFORMATION | MB_SYSTEMMODAL, _UU("SVC_TEST_MSG"), title);
+	//MsgBoxEx(NULL, MB_ICONINFORMATION | MB_SYSTEMMODAL, _UU("SVC_TEST_MSG"), title);
+	getchar();
 
 	// Stop
 	stop();
@@ -6530,7 +6531,7 @@ UINT MsService(char *name, SERVICE_FUNCTION *start, SERVICE_FUNCTION *stop, UINT
 	}
 
 	// Start of the Mayaqua
-	InitMayaqua(false, false, 0, NULL);
+	InitMayaqua(false, true, 0, NULL);
 
 	// Stop the MS-IME
 	MsDisableIme();
@@ -6995,6 +6996,7 @@ UINT MsService(char *name, SERVICE_FUNCTION *start, SERVICE_FUNCTION *stop, UINT
 			case SVC_MODE_TEST:
 				// Test mode
 				MsTestModeW(service_title, start, stop);
+				
 				break;
 
 			case SVC_MODE_WIN9X_SERVICE:

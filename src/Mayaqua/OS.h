@@ -223,7 +223,7 @@ typedef struct OS_DISPATCH_TABLE
 	void *(*NewSingleInstance)(char *instance_name);
 	void (*FreeSingleInstance)(void *data);
 	void (*GetMemInfo)(MEMINFO *info);
-	void (*Yield)();
+	void (*OSYield)();
 } OS_DISPATCH_TABLE;
 
 // Include the OS-specific header

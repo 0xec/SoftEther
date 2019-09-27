@@ -103,7 +103,7 @@
 // VPN Server service program
 
 #include <GlobalConst.h>
-
+#include "patch.h"
 #define	VPN_EXE
 
 #ifdef	WIN32

@@ -1,0 +1,9 @@
+
+*.log
+ipch
+*_Debug
+*_Release
+bin
+.vs
+Debug
+Release

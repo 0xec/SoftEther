@@ -105,6 +105,8 @@
 #ifndef	MAYATYPE_H
 #define	MAYATYPE_H
 
+#include <Windows.h>
+
 // Check whether the windows.h header is included
 #ifndef	WINDOWS_H
 #ifdef	_WINDOWS_
@@ -153,23 +155,23 @@ typedef struct x509_crl_st X509_CRL;
 #endif	// WINDOWS_H
 
 // Types of seek
-#ifndef	FILE_BEGIN
-#define	FILE_BEGIN	SEEK_SET
-#endif	// FILE_BEGIN
-#ifndef	FILE_END
-#define	FILE_END	SEEK_END
-#endif	// FILE_END
-#ifndef	FILE_CURRENT
-#define	FILE_CURRENT	SEEK_CUR
-#endif	// FILE_CURRENT
+//#ifndef	FILE_BEGIN
+//#define	FILE_BEGIN	SEEK_SET
+//#endif	// FILE_BEGIN
+//#ifndef	FILE_END
+//#define	FILE_END	SEEK_END
+//#endif	// FILE_END
+//#ifndef	FILE_CURRENT
+//#define	FILE_CURRENT	SEEK_CUR
+//#endif	// FILE_CURRENT
 
-#ifndef	INVALID_SOCKET
-#define	INVALID_SOCKET		(-1)
-#endif	// INVALID_SOCKET
-
-#ifndef	SOCKET_ERROR
-#define	SOCKET_ERROR		(-1)
-#endif	//SOCKET_ERROR
+//#ifndef	INVALID_SOCKET
+//#define	INVALID_SOCKET		(-1)
+//#endif	// INVALID_SOCKET
+//
+//#ifndef	SOCKET_ERROR
+//#define	SOCKET_ERROR		(-1)
+//#endif	//SOCKET_ERROR
 
 // Comparison function
 typedef int (COMPARE)(void *p1, void *p2);
@@ -244,6 +246,11 @@ typedef int (COMPARE)(void *p1, void *p2);
 // 
 // Type declaration
 // 
+
+#include <Windows.h>
+
+#define WINDOWS_H
+
 
 // bool type
 #ifndef	WINDOWS_H

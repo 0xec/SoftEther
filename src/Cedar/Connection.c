@@ -3121,7 +3121,7 @@ void ConnectionAccept(CONNECTION *c)
 						}
 					}
 
-					goto ERROR;
+					goto Error;
 				}
 			}
 		}
@@ -3155,7 +3155,7 @@ void ConnectionAccept(CONNECTION *c)
 
 		error_details = "StartSSL";
 
-		goto ERROR;
+		goto Error;
 	}
 
 
@@ -3171,7 +3171,7 @@ void ConnectionAccept(CONNECTION *c)
 	{
 		// Failed
 		Debug("ServerAccept Failed. Err = %u\n", c->Err);
-		goto ERROR;
+		goto Error;
 	}
 
 	if (c->flag1 == false)
@@ -3185,7 +3185,7 @@ void ConnectionAccept(CONNECTION *c)
 	Free(peek_buf);
 	return;
 
-ERROR:
+Error:
 	Debug("ConnectionAccept() Error.\n");
 
 

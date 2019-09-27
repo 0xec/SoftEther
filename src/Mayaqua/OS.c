@@ -248,7 +248,7 @@ void OSGetMemInfo(MEMINFO *info)
 // Yield
 void OSYield()
 {
-	os->Yield();
+	os->OSYield();
 }
 
 // Start a Single instance
